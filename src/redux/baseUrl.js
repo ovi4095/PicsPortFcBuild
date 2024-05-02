@@ -1,0 +1,1 @@
+export const baseUrl = 'https://picsport-6df8c-default-rtdb.firebaseio.com/picsport/';

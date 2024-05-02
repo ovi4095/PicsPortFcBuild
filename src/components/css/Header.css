@@ -1,0 +1,32 @@
+:root {
+    --color-primary: #806DBF;
+    --color-secondery: #5B5080;
+    --color-accent: #F1EB90;
+}
+.nav{
+    padding-left: 10rem;
+    background: var(--color-primary);
+    height: auto;
+}
+.logo {
+    width: 8rem;
+}
+.NavItems a{
+    color: white;
+    font-size: 1rem;    
+}
+.NavItems a:hover{
+    color: var(--color-accent);
+    font-size: 1rem;    
+}
+.dropdown-menu>button:hover {
+
+    /* margin: .5rem 2rem .5rem 1rem; */
+    background: #F1EB90;
+    transition: 0.3s;
+}
+/* @media screen and (min-width: 350px) {
+    .logo {
+        margin-left: 0rem;
+    }
+} */
