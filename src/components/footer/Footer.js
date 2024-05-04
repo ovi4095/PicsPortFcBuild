@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './../css/Footer.css'
+import '../../css/Footer.css'
 import FooterLogo from '../../assets/images/logo/PicsPort.png'
 import Fb from '../../assets/images/socialLinks/fb.png'
 import Insta from '../../assets/images/socialLinks/insta.png'

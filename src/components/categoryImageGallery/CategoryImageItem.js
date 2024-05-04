@@ -1,8 +1,7 @@
 import React from 'react'
 import '../../css/Gallery.css'
 
-export const GalleryItem = (props) => {
-    // console.log('item', props.images.map(item => item.image))
+const CategoryImageItem = (props) => {
   return (
     <div>
         {props.images.map((item) => {
@@ -18,3 +17,5 @@ export const GalleryItem = (props) => {
     </div>
   )
 }
+
+export default CategoryImageItem

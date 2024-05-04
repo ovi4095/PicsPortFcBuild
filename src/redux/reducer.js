@@ -45,7 +45,7 @@ const commentReducer = (commentState = {isLoading: true, comments:[]}, action) =
             let comments = [];
             for (let key in action.payload) {
                 comments.push({
-                    ...action.payload[key]
+                    ...action.payload[key],
                 })
             }
             return {
@@ -59,12 +59,6 @@ const commentReducer = (commentState = {isLoading: true, comments:[]}, action) =
                 isLoading: true,
                 comments: []
             }
-        case actionTyeps.ADD_COMMENT:
-            let comment= action.payload;
-            return {
-                ...commentState,
-                comments: commentState.comments.concat(comment)
-            };
         default:
             return commentState;
     }
@@ -91,6 +85,7 @@ const authReducer = (authState = {token: null, userId: null, authLoading: false,
                 authLoading: action.payload,
             }
         case actionTyeps.AUTH_FAILED:
+            // console.log('form reducer error:', action.payload)
             return {
                 ...authState,
                 authFailedMsg: action.payload,

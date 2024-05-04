@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './../css/Header.css'
+import '../../css/Header.css'
 import { Collapse, Nav, NavItem, Navbar, NavbarBrand, NavbarToggler } from 'reactstrap'
 import Logo from '../../assets/images/logo/PicsPortLogo.png'
 import { Link } from 'react-router-dom'
@@ -27,7 +27,7 @@ export const Header = (props) => {
                 <NavItem ><Link className='nav-link' to='/home' >Home</Link></NavItem>
                 <NavItem ><Link className='nav-link' to='/about' >About</Link></NavItem>
                 <NavItem ><Link className='nav-link' to='/gallery' >Gallery</Link></NavItem>
-                <NavItem ><Link className='nav-link' to='/gallery' >Category</Link></NavItem>
+                <NavItem ><Link className='nav-link' to='/category' >Category</Link></NavItem>
                 <NavItem ><Link className='nav-link' to='/login' >Log in</Link></NavItem>    
         </Nav> 
       ):(
@@ -38,7 +38,7 @@ export const Header = (props) => {
                 <NavItem ><Link className='nav-link' to='/home' >Home</Link></NavItem>
                 <NavItem ><Link className='nav-link' to='/about' >About</Link></NavItem>
                 <NavItem ><Link className='nav-link' to='/gallery' >Gallery</Link></NavItem>
-                <NavItem ><Link className='nav-link' to='/gallery' >Category</Link></NavItem>
+                <NavItem ><Link className='nav-link' to='/category' >Category</Link></NavItem>
                 <NavItem ><Link className='nav-link' to='/logout' >Log out</Link></NavItem>    
             </Nav> 
       );

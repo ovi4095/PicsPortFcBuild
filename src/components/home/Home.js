@@ -1,16 +1,12 @@
 import React from 'react'
-import './../css/Home.css'
+import '../../css/Home.css'
 import Banner1 from '../../assets/images/banner/banner1.png'
 import Banner2 from '../../assets/images/banner/banner2.png'
 import Banner3 from '../../assets/images/banner/banner3.png'
 import Gallery1 from '../../assets/images/home/g1.png'
 import Gallery2 from '../../assets/images/home/g2.png'
-import Category1 from '../../assets/images/home/category1.png'
-import Category2 from '../../assets/images/home/category2.png'
-import Category3 from '../../assets/images/home/category3.png'
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import { connect } from 'react-redux'
-import Loading from '../loading/Loading'
 
 const mapStateToProps = state => {
     return {
@@ -68,16 +64,56 @@ const Home = (props) => {
             </section>
             <section className='container grid'>
                 <div className='Category--text'>
-                    <h2>6 Different Categories</h2>
-                    <p>You can browse as much as you want and share your opinions as much as you want </p>
+                    <Link 
+                        to='/category '
+                        style={{textDecoration:'none', color:'#806dbf'}}>
+                                    <h2>6 Different Categories</h2>
+                    </Link>
+                                    <p>You can browse as much as you want and share your opinions as much as you want </p>
                 </div>
                 <div className='category--img-flex'>
-                    <h1 className='categoryTitle'>Animal</h1>
-                    <h1 className='categoryTitle'>Anime</h1>
-                    <h1 className='categoryTitle'>Background</h1>
-                    <h1 className='categoryTitle'>People</h1>
-                    <h1 className='categoryTitle'>Land Scape</h1>
-                    <h1 className='categoryTitle'>Space</h1>
+                    <Link 
+                        to='/categoryImage'
+                        state={{categoryName: 'Animal'}}
+                        style={{textDecoration:'none'}}
+                            >
+                        <h1 className='categoryTitle'>Animal</h1>
+                    </Link>
+                    <Link
+                         to='/categoryImage'
+                         state={{categoryName: 'Anime'}}
+                         style={{textDecoration:'none'}}
+                            >
+                        <h1 className='categoryTitle'>Anime</h1>
+                    </Link>
+                    <Link
+                         to='/categoryImage'
+                         state={{categoryName: 'Background'}}
+                         style={{textDecoration:'none'}}
+                            >
+                        <h1 className='categoryTitle'>Background</h1>
+                    </Link>
+                    <Link
+                         to='/categoryImage'
+                         state={{categoryName: 'People'}}
+                         style={{textDecoration:'none'}}
+                            >
+                        <h1 className='categoryTitle'>People</h1>
+                    </Link>
+                    <Link
+                         to='/categoryImage'
+                         state={{categoryName: 'Land Scape'}}
+                         style={{textDecoration:'none'}}
+                            >
+                        <h1 className='categoryTitle'>Land Scape</h1>
+                    </Link>
+                    <Link
+                         to='/categoryImage'
+                         state={{categoryName: 'Space'}}
+                         style={{textDecoration:'none'}}
+                            >
+                        <h1 className='categoryTitle'>Space</h1>
+                    </Link>
                 </div>
             </section>
         </div>

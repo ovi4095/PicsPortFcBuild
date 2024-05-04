@@ -1,6 +1,6 @@
 import React from 'react'
 import AboutPic from '../../assets/images/about/aboutPic.png'
-import './../css/About.css'
+import '../../css/About.css'
 const About = () => {
   return (
     <div className='container'>
