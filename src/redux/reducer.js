@@ -1,15 +1,15 @@
 import { combineReducers } from "redux";
-import * as actionTyeps from './actionTypes';
+import * as actionTypes from './actionTypes';
 
 const categoryReducer = (categoryState = { isLoading: true, categories: []}, action) => {
         switch (action.type) {
-            case actionTyeps.CATEGORIES_LOADING:
+            case actionTypes.CATEGORIES_LOADING:
                 return {
                     ...categoryState,
                     isLoading: true,
                     categories: []
                 }
-            case actionTyeps.LOAD_CATEGORIES:
+            case actionTypes.LOAD_CATEGORIES:
                 return {
                     ...categoryState,
                     isLoading: false,
@@ -22,13 +22,13 @@ const categoryReducer = (categoryState = { isLoading: true, categories: []}, act
 
 const imageReducer = (imageState = { isLoading: true, images: []}, action) => {
     switch (action.type) {
-        case actionTyeps.IMAGES_LOADING:
+        case actionTypes.IMAGES_LOADING:
             return {
                 ...imageState,
                 isLoading: true,
                 images: []
             }
-        case actionTyeps.LOAD_IMAGES:
+        case actionTypes.LOAD_IMAGES:
             return {
                 ...imageState,
                 isLoading: false,
@@ -41,7 +41,7 @@ const imageReducer = (imageState = { isLoading: true, images: []}, action) => {
 
 const commentReducer = (commentState = {isLoading: true, comments:[]}, action) => {
     switch(action.type) {
-        case actionTyeps.LOAD_COMMENTS:
+        case actionTypes.LOAD_COMMENTS:
             let comments = [];
             for (let key in action.payload) {
                 comments.push({
@@ -53,7 +53,7 @@ const commentReducer = (commentState = {isLoading: true, comments:[]}, action) =
                 comments: comments,
                 isLoading: false
             }
-        case actionTyeps.COMMENTS_LOADING:
+        case actionTypes.COMMENTS_LOADING:
             return {
                 ...commentState,
                 isLoading: true,
@@ -66,25 +66,25 @@ const commentReducer = (commentState = {isLoading: true, comments:[]}, action) =
 
 const authReducer = (authState = {token: null, userId: null, authLoading: false, authFailedMsg: null}, action) => {
     switch(action.type) {
-        case actionTyeps.AUTH_SUCCESS:
+        case actionTypes.AUTH_SUCCESS:
             return {
                 ...authState,
                 token: action.payload.token,
                 userId: action.payload.userId,
             }
-        case actionTyeps.AUTH_LOGOUT:
+        case actionTypes.AUTH_LOGOUT:
             return {
                 ...authState,
                 authFailedMsg: null,
                 token: null,
                 userId: null,
             }
-        case actionTyeps.AUTH_LOADING:
+        case actionTypes.AUTH_LOADING:
             return {
                 ...authState,
                 authLoading: action.payload,
             }
-        case actionTyeps.AUTH_FAILED:
+        case actionTypes.AUTH_FAILED:
             // console.log('form reducer error:', action.payload)
             return {
                 ...authState,
