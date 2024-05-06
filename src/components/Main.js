@@ -12,6 +12,7 @@ import Auth from './auth/Auth'
 import { useEffect } from 'react'
 import { fetchCategories, fetchComments, fetchImages } from '../redux/actionCreators'
 import Logout from './auth/Logout'
+import { authCheck } from '../redux/authActionCreators'
 
 
 
@@ -22,14 +23,17 @@ const mapStateToProps = (state) => {
 }
 const mapDispatchToProps = dispatch => {
     return {
+        authCheck: () => dispatch(authCheck()),
         fetchCategories:() => dispatch(fetchCategories()),
         fetchImages:() => dispatch(fetchImages()),
         fetchComments:() => dispatch(fetchComments())
+
     }
 }
 
 export const Main = (props) => {
     useEffect(()=>{
+        props.authCheck();
         props.fetchCategories();
         props.fetchImages();
         props.fetchComments();
