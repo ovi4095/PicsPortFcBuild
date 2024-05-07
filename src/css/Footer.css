@@ -64,6 +64,7 @@
     color: white;
     border: none;
     font-size: 1.6rem;
+    margin-right: 10rem;
 }
 .Footerbtn:hover {
     color: wheat;
@@ -101,6 +102,9 @@
     .footerLogo {
         width: 8rem;
         align-self: center;
+    }
+    .Footerbtn {
+        margin-right: 0rem;
     }
     /* .footerAboutPara {
         display: grid;
